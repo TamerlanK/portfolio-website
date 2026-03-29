@@ -8,16 +8,31 @@ export function Header() {
   return (
     <LayoutGroup>
       <motion.h2
-        className="z-10 flex flex-wrap items-center text-3xl font-semibold text-white sm:text-4xl md:text-5xl lg:text-6xl"
+        className="
+          z-10
+          flex flex-col sm:flex-row
+          items-center sm:items-baseline
+          justify-center sm:justify-start
+          text-center sm:text-left
+          font-semibold text-white
+          leading-tight
+          whitespace-normal
+        "
+        style={{
+          fontSize: "clamp(1.5rem, 4vw, 3.5rem)", // 🔥 fluid scaling
+        }}
         variants={topElementVariants}
         initial="hidden"
         animate="visible"
-        aria-label={`Introduction: Hi, I am Tamerlan`}
+        aria-label="Introduction: Hi, I am Tamerlan"
       >
         <motion.span
           layout
           transition={{ type: "spring", damping: 30, stiffness: 400 }}
-          className="mr-3"
+          className="
+            mb-2 sm:mb-0
+            sm:mr-3
+          "
         >
           Hi, I am
         </motion.span>
@@ -30,8 +45,9 @@ export function Header() {
             "a JavaScript Lover",
           ]}
           mainClassName="
-            p-5
-            rounded-2xl border border-neutral-700
+            px-4 py-2 sm:px-5 sm:py-3
+            rounded-xl sm:rounded-2xl
+            border border-neutral-700
             bg-neutral-800/30 backdrop-blur-lg
             text-neutral-200
             transition-all

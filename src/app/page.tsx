@@ -24,7 +24,7 @@ export default function Home() {
           variants={bottomElementVariants}
           initial="hidden"
           animate="visible"
-          className="z-10 flex w-full flex-col gap-6 items-center justify-center md:px-0"
+          className="z-10 flex w-full flex-col gap-3 md:gap-6 items-center justify-center md:px-0"
         >
           <SearchForm onSubmit={handleChatNavigation} />
           <QuickQuestions onQuestionSelect={handleChatNavigation} />

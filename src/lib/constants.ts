@@ -14,6 +14,9 @@ export const QUESTIONS = {
   Contact: "How can I contact you?",
 } as const;
 
+export type QuestionKey = keyof typeof QUESTIONS;
+export type QuestionValue = (typeof QUESTIONS)[QuestionKey];
+
 export const QUESTION_CONFIG = [
   { key: "Me", icon: Laugh },
   { key: "Projects", icon: BriefcaseBusiness },
@@ -21,5 +24,3 @@ export const QUESTION_CONFIG = [
   { key: "Fun", icon: PartyPopper },
   { key: "Contact", icon: UserRoundSearch },
 ] as const;
-
-export type QuestionKey = keyof typeof QUESTIONS;

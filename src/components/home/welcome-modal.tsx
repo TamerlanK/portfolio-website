@@ -26,12 +26,12 @@ export function WelcomeModal() {
         <button
           className="
             fixed top-6 right-6 z-50
-            flex h-12 w-12 items-center justify-center text-white
-            border-neutral-700 hover:bg-neutral-700/30 aspect-square rounded-xl border bg-neutral-800/30 shadow-none backdrop-blur-lg active:scale-95
+            flex size-10 sm:size-12 items-center justify-center text-white
+            border-neutral-700 hover:bg-neutral-700/30 aspect-square rounded-lg sm:rounded-xl border bg-neutral-800/30 shadow-none backdrop-blur-lg active:scale-95
           "
           aria-label="Open welcome modal"
         >
-          <Info className="h-5 w-5" />
+          <Info className="size-5" />
         </button>
       </DialogTrigger>
 
