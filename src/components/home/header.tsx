@@ -51,6 +51,7 @@ export function Header() {
             bg-neutral-800/30 backdrop-blur-lg
             text-neutral-200
             transition-all
+            text-center
           "
           splitLevelClassName="
             overflow-hidden
