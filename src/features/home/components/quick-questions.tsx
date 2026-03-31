@@ -2,14 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  QUESTION_CONFIG,
-  QuestionKey,
-  QUESTIONS,
-  QuestionValue,
-} from "@/lib/constants";
+import { QUESTION_CONFIG, QuestionKey, QUESTIONS } from "@/lib/constants";
 import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { QUICK_SUGGESTION_MAP } from "@/features/chat/lib/chat-config";
+import { useChat } from "@/features/chat/lib/chat-store";
+import { useScrollMask } from "@/hooks/use-scroll-mask";
 
 interface QuestionConfigItem {
   key: string;
@@ -17,63 +15,19 @@ interface QuestionConfigItem {
   label?: string;
 }
 
-interface QuickQuestionsProps {
-  onQuestionSelect: (query: string) => void;
-}
+export function QuickQuestions() {
+  const { startChat } = useChat();
 
-export function QuickQuestions({ onQuestionSelect }: QuickQuestionsProps) {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const { ref, maskStyle } = useScrollMask<HTMLDivElement>();
 
-  const [hasLeftFade, setHasLeftFade] = useState(false);
-  const [hasRightFade, setHasRightFade] = useState(false);
-
-  const updateFade = () => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = el;
-
-    const isScrollable = scrollWidth > clientWidth + 1;
-
-    if (!isScrollable) {
-      setHasLeftFade(false);
-      setHasRightFade(false);
-      return;
+  const handleSelect = (key: string) => {
+    const suggestion = QUICK_SUGGESTION_MAP[key];
+    if (suggestion) {
+      startChat(suggestion.query);
+    } else {
+      const query = QUESTIONS[key as QuestionKey];
+      if (query) startChat(String(query));
     }
-
-    setHasLeftFade(scrollLeft > 5);
-    setHasRightFade(scrollLeft + clientWidth < scrollWidth - 5);
-  };
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    updateFade();
-
-    el.addEventListener("scroll", updateFade);
-    window.addEventListener("resize", updateFade);
-
-    return () => {
-      el.removeEventListener("scroll", updateFade);
-      window.removeEventListener("resize", updateFade);
-    };
-  }, []);
-
-  const getMask = () => {
-    if (hasLeftFade && hasRightFade) {
-      return "linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent)";
-    }
-
-    if (hasRightFade) {
-      return "linear-gradient(to right, black 0%, black calc(100% - 32px), transparent)";
-    }
-
-    if (hasLeftFade) {
-      return "linear-gradient(to right, transparent, black 32px, black 100%)";
-    }
-
-    return "none";
   };
 
   return (
@@ -82,27 +36,23 @@ export function QuickQuestions({ onQuestionSelect }: QuickQuestionsProps) {
       className="relative w-full max-w-2xl mx-auto"
     >
       <div
-        ref={scrollRef}
         className={cn(
           "flex overflow-x-auto gap-2 pb-2 md:grid md:grid-cols-5 md:overflow-visible md:pb-0",
           "scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none]",
           "md:mask-none md:[-webkit-mask-image:none]"
         )}
-        style={{
-          WebkitMaskImage: getMask(),
-          maskImage: getMask(),
-        }}
+        ref={ref}
+        style={maskStyle}
       >
         {QUESTION_CONFIG.map(
           ({ key, icon: Icon, label }: QuestionConfigItem) => {
             const displayLabel = label || key;
-            const query = QUESTIONS[key as QuestionKey] as QuestionValue;
 
             return (
               <Button
                 key={key}
                 type="button"
-                onClick={() => query && onQuestionSelect(query)}
+                onClick={() => handleSelect(key)}
                 variant="outline"
                 aria-label={`Ask about ${displayLabel}`}
                 className={cn(
@@ -126,7 +76,6 @@ export function QuickQuestions({ onQuestionSelect }: QuickQuestionsProps) {
                   )}
                   aria-hidden="true"
                 />
-
                 <span
                   className={cn(
                     "font-medium leading-none",
