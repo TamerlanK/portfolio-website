@@ -35,98 +35,127 @@ export interface QuestionCategory {
 export const CHAT_RESPONSES: Record<string, ChatResponseConfig> = {
   // ── Me ──
   "who-are-you": {
-    text: `Hey! I'm Tamerlan Kangarli — a full-stack developer from Baku, Azerbaijan 🇦🇿 currently based in Paris.
+    text: `Hey! I'm Tamerlan Kangarli — a Fullstack JavaScript Developer from Azerbaijan 🇦🇿.
 
-I build modern web applications with React, Next.js, Node.js, and TypeScript. I'm a graduate of École 42 Paris, one of the most innovative coding schools in the world — no teachers, no classes, just peer-to-peer learning and real projects.
+I have over 3 years of experience building scalable and user-friendly web applications, specializing in React, Next.js, TypeScript, and modern frontend architecture. I also work with Node.js and NestJS to build secure and performant backend services.
 
-I love turning complex problems into elegant, user-friendly solutions. This portfolio itself is a good example of my approach: interactive, polished, and a little unconventional.`,
+I’ve worked with companies like Andersen Lab and Millisoft, where I built complex systems including warehouse management platforms, medical applications, and HR/accounting tools.
+
+I focus on clean code, performance, and building products that actually deliver value — not just features.
+
+This portfolio reflects how I approach development: interactive, thoughtful, and a bit different.`,
     images: [{ src: "/images/me.jpg", alt: "Tamerlan Kangarli" }],
   },
 
   "your-passions": {
-    text: `Where do I start? 😄
+    text: `I genuinely enjoy building things — especially when they solve real problems.
 
-Code is obviously a big one — I genuinely enjoy the craft of building things. There's something deeply satisfying about writing clean, performant code that creates real experiences for people.
+I like working on complex systems where architecture, performance, and UX all matter. There's something really satisfying about turning messy requirements into clean, scalable solutions.
 
-Outside of tech, I'm a mountain biker 🚵 — I love the combination of nature, adrenaline, and focus it requires. I'm also into exploring new cultures and cuisines when I travel.
+Outside of tech, I enjoy exploring new places, learning new things, and pushing myself into unfamiliar territory — that’s where the growth happens.
 
-And honestly? I'm passionate about learning itself. Whether it's a new framework, a new language, or even a new cooking technique — that feeling of "clicking" with something new never gets old.`,
+And honestly, I just like getting better at what I do every day.`,
   },
 
   "started-in-tech": {
-    text: `My journey into tech started with curiosity — I was always the kid who wanted to know how things worked behind the screen.
+    text: `I started with curiosity — wanting to understand how things work behind the screen.
 
-I started teaching myself to code as a teenager, building small projects and breaking things along the way (mostly breaking things, honestly). That self-taught foundation led me to discover École 42 in Paris.
+That turned into building small projects, then more complex applications, and eventually working on real production systems with teams.
 
-42 was a game-changer. The peer-to-peer model forced me to learn deeply, collaborate constantly, and solve problems I never thought I could tackle. It shaped my approach to engineering: resourceful, collaborative, and always hungry to learn more.`,
+My academic background in Information Assurance and Cybersecurity gave me strong fundamentals, but most of my growth came from hands-on experience — building, breaking, fixing, and improving real systems.`,
   },
 
   "five-year-vision": {
-    text: `In five years, I see myself leading engineering teams that build products people actually love using.
+    text: `In five years, I see myself as a senior or lead engineer working on high-impact products.
 
-I want to be at the intersection of technical excellence and product thinking — not just writing great code, but making decisions about what to build and why. Whether that's as a tech lead at an innovative company or building my own product, the goal is the same: create meaningful impact through technology.
+I want to be deeply involved not just in coding, but in architectural decisions, performance strategy, and product direction.
 
-I also want to keep contributing to the developer community — through open source, mentoring, or sharing what I've learned along the way.`,
+I also want to mentor other developers, contribute to strong engineering culture, and build systems that are both scalable and enjoyable to use.`,
   },
 
   // ── Professional ──
   "see-resume": {
-    text: `I'd be happy to share my resume! You can download it here:
+    text: `You can download my resume here:
 
 📄 [Download Resume (PDF)](/resume.pdf)
 
-But honestly, this chat might give you a better sense of who I am than a PDF ever could. Feel free to ask me anything about my experience, skills, or projects!`,
+But honestly, this chat gives a more complete picture of how I think and work. Feel free to ask me anything!`,
   },
 
   "valuable-team-member": {
-    text: `Three things set me apart:
+    text: `Three things make me a strong team member:
 
-**1. Full-stack versatility** — I can jump between a React frontend, a Node.js API, and a PostgreSQL database without missing a beat. I don't just "know" both sides — I genuinely enjoy working across the stack.
+**1. Experience with complex systems**  
+I’ve worked on large-scale applications like warehouse management and HR systems with complex data flows and real-world constraints.
 
-**2. Product mindset** — I don't just implement specs. I ask "why?" and "for whom?" I think about user experience, performance implications, and long-term maintainability before writing a single line of code.
+**2. Fullstack capability**  
+Strong frontend expertise with React + solid backend experience with Node.js and NestJS — I understand how the whole system fits together.
 
-**3. Ownership culture** — When I take on something, I own it end-to-end. I communicate proactively, I flag risks early, and I don't consider something done until it's polished and shipped.
+**3. Real impact**  
+• Improved performance by 30–35%  
+• Increased test coverage from 40% to 85%  
+• Mentored junior developers and led code reviews  
 
-Oh, and I make really good coffee for the team. ☕`,
+I don’t just write code — I improve systems and contribute to the team.`,
   },
 
   "working-now": {
-    text: `I'm currently open to new opportunities and actively looking for roles where I can make a real impact.
+    text: `I'm currently open to new opportunities as a Fullstack or Frontend Developer.
 
-Previously, I've worked on various projects spanning web applications, real-time systems, and developer tools. I thrive in environments that value clean code, thoughtful architecture, and a great user experience.
+Most recently at Andersen Lab, I:
+• Built scalable UI for a warehouse management system using React + Redux  
+• Developed backend services with NestJS for a medical app  
+• Increased test coverage from 40% to 85%  
+• Mentored junior developers  
 
-If you're building something exciting and need a developer who cares deeply about quality — let's talk! 🚀`,
+Before that, at Millisoft, I worked on a large HR & accounting system with 30+ modules.
+
+I'm looking for a team that values clean architecture, performance, and real product impact.`,
   },
 
   "why-hire": {
-    text: `Here's the honest pitch:
+    text: `Here’s the honest answer:
 
-You should hire me if you want someone who treats your product like their own. I don't do "just enough" — I obsess over the details because that's where great software lives.
+You should hire me if you want someone who:
+• Writes clean, maintainable, production-ready code  
+• Understands both frontend and backend systems  
+• Cares about performance and user experience  
+• Takes ownership and delivers results  
 
-I bring strong technical skills (React, Next.js, TypeScript, Node.js, and more), but more importantly, I bring judgment. I know when to move fast and when to slow down and get it right. I know when to use a library and when to build from scratch.
+I’ve already worked on real-world systems with measurable impact — improving performance, scalability, and reliability.
 
-And I'm genuinely fun to work with. Engineering is a team sport, and I believe great culture leads to great products.`,
+And I’m easy to work with. That matters more than people think.`,
   },
 
   education: {
-    text: `My main education is from **École 42 Paris** — a revolutionary coding school founded by Xavier Niel. No teachers, no tuition, no traditional classes.
+    text: `I have a strong academic background in technology:
 
-Instead, it's project-based, peer-to-peer learning. You learn by doing — building everything from a shell interpreter to a web server from scratch. The curriculum is designed to teach you how to learn, not just what to learn.
+🎓 Master’s in Cybersecurity  
+Azerbaijan State University of Economics  
 
-Before 42, I studied in Azerbaijan and was always drawn to STEM subjects. But 42 is where I truly became an engineer. The experience taught me resilience, collaboration, and how to solve problems I've never seen before — which is basically the job description of a developer. 😄`,
+🎓 Bachelor’s in Information Assurance  
+Azerbaijan State Oil and Industry University  
+
+This gave me a solid foundation in systems, security, and problem-solving — which I apply in real-world development.`,
   },
 
   // ── Projects ──
   "proud-projects": {
-    text: `A few projects I'm especially proud of:
+    text: `Here are some projects I’m proud of:
 
-🎨 **This Portfolio** — The one you're using right now! Built with Next.js, Framer Motion, and a lot of love. I wanted to create something that feels alive and personal, not just another static portfolio page.
+🏭 **Warehouse Management System (Andersen Lab)**  
+Built scalable frontend architecture with React + Redux for complex logistics workflows.
 
-🔧 **42 Projects** — At École 42, I built everything from low-level C programs (like my own printf and shell) to full-stack web applications. Each one pushed me to understand computing at a deeper level.
+🏥 **Medical Care Application**  
+Developed secure backend services using NestJS.
 
-💡 **Various Client Projects** — I've built web applications for startups and businesses, focusing on clean architecture, performance, and great UX.
+📊 **HR & Accounting System (Millisoft)**  
+Worked on 30+ modules with complex forms, filtering, and reusable components.
 
-I'm always working on something new — feel free to check out my GitHub for the latest!`,
+🎨 **This Portfolio**  
+A more creative project — built to showcase both personality and engineering approach.
+
+I enjoy both: complex enterprise systems and polished UI experiences.`,
     images: [
       {
         src: "/images/projects/portfolio.png",
@@ -137,115 +166,95 @@ I'm always working on something new — feel free to check out my GitHub for the
 
   // ── Skills ──
   "your-skills": {
-    text: `Here's my tech stack at a glance:
+    text: `Here's my stack:
 
-**Frontend:** React, Next.js, TypeScript, Tailwind CSS, Framer Motion, HTML/CSS
-**Backend:** Node.js, Express, REST APIs, GraphQL
-**Database:** PostgreSQL, MongoDB, Prisma
-**DevOps:** Docker, Git, CI/CD, Vercel, Linux
-**Languages:** JavaScript/TypeScript, C, C++, Python, Bash
+**Frontend:**  
+React, Next.js, TypeScript, JavaScript (ES6+)  
+HTML5, CSS3, Tailwind, SCSS, Material UI, Ant Design  
 
-Beyond the tools, I focus on fundamentals: clean architecture, performance optimization, accessibility, responsive design, and writing code that other developers actually enjoy reading.
+**State & Data:**  
+Redux Toolkit, Context API, Zustand, React Query  
 
-I'm always adding to this list — right now I'm diving deeper into AI/ML integration and advanced animation techniques.`,
-  },
+**Backend:**  
+Node.js, Express, NestJS  
 
-  "ecole-42": {
-    text: `École 42 was one of the most intense and rewarding experiences of my life.
+**Databases:**  
+MongoDB, PostgreSQL  
 
-Imagine a coding school with no teachers, no lectures, no tuition — just you, your peers, and increasingly complex projects. You have to figure everything out yourself (or with your peers), and the school is open 24/7.
+**Testing:**  
+Jest, React Testing Library  
 
-The projects range from recreating standard C library functions to building a fully functional web application. I learned C, C++, networking, algorithms, and system programming from the ground up.
+**Performance:**  
+Code splitting, lazy loading, memoization  
 
-But the biggest thing 42 taught me wasn't any specific technology — it was how to learn. How to face a problem I have zero idea how to solve and methodically break it down until I do. That skill transfers to everything.
+**Tools:**  
+Git, Docker (basic), Vite, Webpack, ESLint, Prettier  
 
-It's not for everyone, but it was perfect for me. 🎯`,
-    images: [{ src: "/images/42.jpg", alt: "École 42 Paris campus" }],
+I focus on clean architecture, scalability, and maintainability.`,
   },
 
   // ── Fun ──
   "mountain-bike": {
-    text: `Oh, you want to see the bike life? 🚵‍♂️
+    text: `I like activities that require focus and control — same as coding, just in a different form.
 
-I'm a huge mountain biking enthusiast! There's nothing quite like hitting a trail early in the morning — the combination of nature, speed, and technical challenge is unmatched.
-
-I mostly ride trails around the Île-de-France region, but I've also done some amazing rides in the mountains. It's my way of disconnecting from screens and reconnecting with the real world.
-
-Plus, it turns out the problem-solving mindset from coding actually helps on the trail — you're constantly reading the terrain and making split-second decisions. Same energy, different medium! 😄`,
-    images: [{ src: "/images/mtb.jpg", alt: "Mountain biking on a trail" }],
+It’s a good way to reset, clear your head, and come back sharper.`,
   },
 
   "craziest-thing": {
-    text: `That's a dangerous question... 😅
+    text: `Probably pushing myself into real production environments early in my career.
 
-Let me put it this way: moving from Azerbaijan to Paris to attend a coding school with no teachers, no guaranteed outcome, and where I knew almost nobody — that was pretty wild.
+Working on complex systems, taking ownership, mentoring others — all while still growing fast myself.
 
-But honestly? The craziest thing might be building this AI-powered portfolio at 2 AM and thinking "yes, this is a perfectly normal thing to do." The line between passion and obsession gets blurry sometimes.
-
-I tend to say yes to things that scare me a little. That's usually where the best stories come from. 🚀`,
+I tend to say yes to challenges and figure things out along the way.`,
   },
 
   "mac-or-pc": {
-    text: `Mac. And I'll die on this hill. 🍎
+    text: `Mac — mainly for the Unix environment and development workflow.
 
-The Unix-based terminal, the build quality, the ecosystem, the trackpad — it's the full package for development. I run my entire workflow on macOS: VS Code, iTerm2, Docker, and about 47 browser tabs.
-
-That said, I have deep respect for the Linux gang. And I spent enough time in 42's Linux labs to be comfortable in any environment. But when it's my choice? Mac all day.
-
-(Please don't @ me, Windows users. I'm sure WSL is great.) 😄`,
+But honestly, I’m comfortable anywhere: Linux, Mac, doesn’t matter. Tools are tools.`,
   },
 
   "contrarian-take": {
-    text: `Here's one: **Most developers over-optimize too early and under-invest in UX.**
+    text: `Most developers focus too much on implementation and not enough on user experience.
 
-90% of engineers I meet will spend days shaving milliseconds off a database query but won't spend 30 minutes making a loading state feel good. Users don't notice your clever indexing strategy — they notice when your app feels snappy, responsive, and delightful.
+You can have perfect code, but if the product feels slow or confusing — it fails.
 
-Performance matters, but perception of performance matters more. A well-crafted skeleton loader can make a 2-second wait feel instant, while a janky instant-load makes fast feel slow.
-
-Build for humans first, benchmarks second. 📊`,
+Performance and UX should always go together.`,
   },
 
   // ── Contact & Future ──
   "reach-me": {
-    text: `I'd love to hear from you! Here's how to reach me:
+    text: `You can reach me here:
 
-📧 **Email:** tamerlan@tamerlan.dev
-💼 **LinkedIn:** linkedin.com/in/tamerlankangarli
-🐙 **GitHub:** github.com/tamerlankangarli
-🌐 **Website:** tamerlan.dev
+📧 Email: tamerlankengerli2002@gmail.com  
+🐙 GitHub: https://github.com/TamerlanK  
+💬 Telegram: @tamerlankangarli  
 
-I'm most responsive on email and LinkedIn. Don't be a stranger — whether it's a job opportunity, a collaboration idea, or just to say hi, my inbox is always open! 📬`,
+I’m open to opportunities, collaborations, or just a quick chat.`,
   },
 
   "dream-project": {
-    text: `I'd say "yes" immediately to a project that:
+    text: `A project where:
 
-🎯 **Solves a real problem** — Not another todo app. Something that genuinely makes people's lives better or easier.
+• The problem is real and impactful  
+• The system is complex enough to require good architecture  
+• The team cares about quality  
+• The product is actually used by people  
 
-🛠️ **Demands technical excellence** — Complex frontend interactions, real-time data, beautiful animations, performance challenges. Give me the hard problems.
-
-🤝 **Has a great team** — Smart, kind people who care about what they're building. Culture isn't a buzzword for me — it's the difference between a job and a mission.
-
-🚀 **Ships to real users** — I want to build things people actually use, not prototypes that live in a repo forever.
-
-Bonus points if it involves any of: developer tools, creative tech, education, or anything that makes the web a more interesting place. 💡`,
+Bonus if it involves performance challenges or complex frontend interactions.`,
   },
 
   location: {
-    text: `I'm currently based in **Paris, France** 🇫🇷 — originally from **Baku, Azerbaijan** 🇦🇿.
+    text: `I'm currently based in Azerbaijan 🇦🇿 and open to remote opportunities.
 
-Paris is an amazing city for tech — great startup ecosystem, incredible food (fuel for coding sessions), and a growing developer community. Plus, being in the CET timezone makes collaboration with both US and Asian teams feasible.
-
-I'm open to remote work, hybrid setups, or on-site positions in Paris. For the right opportunity, I'm also open to relocating.
-
-Wherever the best problems are — that's where I want to be! 🌍`,
+I’m flexible with remote, hybrid, or relocation depending on the role.`,
   },
 
   // ── Fallback ──
   default: {
-    text: `That's a great question! I'm Tamerlan — a full-stack developer passionate about building polished web experiences.
+    text: `Good question — I’m Tamerlan, a Fullstack JavaScript Developer.
 
-Feel free to explore the suggested questions, or ask me anything about my skills, projects, or experience. I'm here to chat! 🚀`,
+Feel free to ask about my experience, skills, or projects — I’ll give you a real answer, not a generic one.`,
   },
 };
 

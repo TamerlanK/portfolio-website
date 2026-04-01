@@ -4,38 +4,31 @@ import { ResponseImages } from "./response-images";
 import { StreamingCursor } from "./streaming-cursor";
 import { MessageContentProps } from "@/features/chat/types";
 import { TypingIndicator } from "./typing-indicator";
+import { MarkdownRenderer } from "@/components/ui/markdown/markdown-renderer";
 
 export function MessageContent({ message, streamText }: MessageContentProps) {
-  const isThinking = message.status === "thinking";
-  const isStreaming = message.status === "streaming";
-  const isComplete = message.status === "complete";
+  const { status, content, images } = message;
 
-  const displayText =
-    isStreaming && streamText != null ? streamText : message.content;
+  const isThinking = status === "thinking";
+  const isStreaming = status === "streaming";
+  const isComplete = status === "complete";
 
-  if (isThinking) {
-    return <TypingIndicator />;
-  }
+  const displayText = isStreaming && streamText != null ? streamText : content;
 
-  if (isStreaming) {
-    return (
-      <p className="whitespace-pre-wrap">
-        {displayText}
-        <StreamingCursor />
-      </p>
-    );
-  }
+  if (isThinking) return <TypingIndicator />;
 
-  if (isComplete) {
-    return (
-      <>
-        <p className="whitespace-pre-wrap">{message.content}</p>
-        {message.images && message.images.length > 0 && (
-          <ResponseImages images={message.images} />
-        )}
-      </>
-    );
-  }
+  return (
+    <div className="space-y-2">
+      {/* Markdown rendering */}
+      <MarkdownRenderer content={displayText} />
 
-  return <p className="whitespace-pre-wrap">{message.content}</p>;
+      {/* Streaming cursor */}
+      {isStreaming && <StreamingCursor />}
+
+      {/* Images only when message is complete and images exist */}
+      {isComplete && Array.isArray(images) && images.length > 0 && (
+        <ResponseImages images={images} />
+      )}
+    </div>
+  );
 }
