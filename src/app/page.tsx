@@ -1,25 +1,24 @@
-"use client";
+"use client"
 
-import Galaxy from "@/components/ui/Galaxy";
-import { bottomElementVariants } from "@/lib/animations";
-import { ChatProvider, useChat } from "@/features/chat/lib/chat-store";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { useChat } from "@/features/chat/lib/chat-store"
+import { bottomElementVariants } from "@/lib/animations"
+import { AnimatePresence, motion } from "framer-motion"
+import Image from "next/image"
 
-import { ChatInterface } from "@/features/chat/components";
+import { ChatInterface, QuestionsDrawer } from "@/features/chat/components"
 import {
   Header,
   Memoji,
   QuickQuestions,
   SearchForm,
   WelcomeModal,
-} from "@/features/home/components";
-import { QuestionsDrawer } from "@/features/chat/components";
+} from "@/features/home/components"
+import { SiteBackground } from "@/components/site-background"
 
 export default function Home() {
-  const { state, startChat, goHome, isThinking } = useChat();
+  const { state, startChat, goHome, isThinking } = useChat()
 
-  const avatarSrc = isThinking ? "/memoji-thinking.png" : "/memoji.png";
+  const avatarSrc = isThinking ? "/memoji-thinking.png" : "/memoji.png"
 
   return (
     <>
@@ -152,21 +151,7 @@ export default function Home() {
         </AnimatePresence>
       </div>
 
-      <div className="fixed top-0 left-0 w-full h-full bg-black z-0">
-        <Galaxy
-          mouseRepulsion
-          mouseInteraction
-          density={1}
-          glowIntensity={0.3}
-          saturation={0}
-          hueShift={140}
-          twinkleIntensity={0.3}
-          rotationSpeed={0.1}
-          repulsionStrength={0.5}
-          starSpeed={0.5}
-          speed={1}
-        />
-      </div>
+      <SiteBackground />
     </>
-  );
+  )
 }

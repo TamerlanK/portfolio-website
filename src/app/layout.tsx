@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import { ChatProvider } from "@/features/chat/lib/chat-store";
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { cn } from "@/lib/utils"
+import { ChatProvider } from "@/features/chat/lib/chat-store"
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-});
+})
 
 export const metadata: Metadata = {
   title: "Tamerlan's Portfolio",
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
     url: "https://tamerlan.dev",
     siteName: "Tamerlan's Portfolio",
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html
@@ -52,5 +52,5 @@ export default function RootLayout({
         <ChatProvider>{children}</ChatProvider>
       </body>
     </html>
-  );
+  )
 }

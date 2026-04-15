@@ -122,10 +122,66 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    /* @apply bg-background text-foreground; */
   }
   html {
     @apply font-sans;
+  }
+
+  /* Base */
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: #020617;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Main soft light + depth */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background-image:
+      radial-gradient(
+        900px circle at 20% 20%,
+        rgba(255, 255, 255, 0.04),
+        transparent 60%
+      ),
+      radial-gradient(
+        800px circle at 80% 80%,
+        rgba(255, 255, 255, 0.03),
+        transparent 65%
+      ),
+      radial-gradient(
+        700px circle at 50% 40%,
+        rgba(148, 163, 184, 0.06),
+        transparent 60%
+      );
+
+    filter: blur(60px);
+  }
+
+  /* Subtle vignette + contrast control */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background: radial-gradient(
+      circle at center,
+      transparent 40%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+
+    pointer-events: none;
   }
 }
 
