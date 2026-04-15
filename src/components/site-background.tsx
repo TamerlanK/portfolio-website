@@ -21,9 +21,6 @@ export function SiteBackground() {
         takeoverDuration={0.25}
         autoResumeDelay={3000}
         autoRampDuration={0.6}
-        color0="#3f3c48"
-        color1="#e6bee5"
-        color2="#B497CF"
       />
       <div className="absolute inset-0 bg-black/35" />
     </div>
